@@ -1,0 +1,42 @@
+{
+  "widow_pension": {
+    "name": "National Family Benefit / Widow Pension Scheme",
+    "language_names": {
+      "hi": "विधवा पेंशन योजना",
+      "en": "Widow Pension Scheme"
+    },
+    "keywords": ["widow", "pension", "husband died", "विधवा", "पेंशन", "पति की मृत्यु"],
+    "required_fields": ["full_name", "dob", "aadhaar_number", "address", "bank_account"],
+    "document_types": ["aadhaar", "death_certificate", "bank_passbook"]
+  },
+  "scholarship_sc_st": {
+    "name": "Post-Matric Scholarship for SC/ST Students",
+    "language_names": {
+      "hi": "अनुसूचित जाति/जनजाति छात्रवृत्ति योजना",
+      "en": "SC/ST Scholarship"
+    },
+    "keywords": ["scholarship", "student", "college fees", "छात्रवृत्ति", "स्कूल", "कॉलेज फीस"],
+    "required_fields": ["full_name", "dob", "aadhaar_number", "caste_certificate_number", "bank_account", "institution_name"],
+    "document_types": ["aadhaar", "caste_certificate", "bank_passbook", "admission_proof"]
+  },
+  "ayushman_bharat": {
+    "name": "Ayushman Bharat Health Insurance",
+    "language_names": {
+      "hi": "आयुष्मान भारत योजना",
+      "en": "Ayushman Bharat"
+    },
+    "keywords": ["health insurance", "hospital", "medical", "आयुष्मान", "अस्पताल", "बीमा"],
+    "required_fields": ["full_name", "dob", "aadhaar_number", "ration_card_number", "address"],
+    "document_types": ["aadhaar", "ration_card"]
+  },
+  "kisan_samman_nidhi": {
+    "name": "PM Kisan Samman Nidhi",
+    "language_names": {
+      "hi": "पीएम किसान सम्मान निधि",
+      "en": "PM Kisan Samman Nidhi"
+    },
+    "keywords": ["farmer", "land", "agriculture", "किसान", "जमीन", "खेती"],
+    "required_fields": ["full_name", "aadhaar_number", "land_record_number", "bank_account"],
+    "document_types": ["aadhaar", "land_record", "bank_passbook"]
+  }
+}

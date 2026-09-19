@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SahayAI — Operator Desk</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Devanagari:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8F%9B%EF%B8%8F%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+<div class="login-overlay" id="loginOverlay">
+  <form class="login-card" id="loginForm">
+    <svg class="login-illustration" viewBox="0 0 220 120" fill="none">
+      <rect x="30" y="70" width="160" height="6" rx="2" fill="#E7E9F0"/>
+      <rect x="50" y="34" width="120" height="38" rx="6" stroke="#6D28D9" stroke-width="2.5"/>
+      <rect x="58" y="42" width="104" height="20" rx="2" fill="#EDE9FE"/>
+      <path d="M58 42 L110 56 L162 42" stroke="#6D28D9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="96" y="72" width="28" height="14" fill="#E7E9F0"/>
+      <circle cx="172" cy="30" r="14" fill="#FFF3EC"/>
+      <path d="M166 30 l4 4 8-8" stroke="#FF7A45" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="36" y="24" width="18" height="22" rx="2" stroke="#22D3EE" stroke-width="2"/>
+      <line x1="40" y1="30" x2="50" y2="30" stroke="#22D3EE" stroke-width="1.6"/>
+      <line x1="40" y1="35" x2="50" y2="35" stroke="#22D3EE" stroke-width="1.6"/>
+      <line x1="40" y1="40" x2="46" y2="40" stroke="#22D3EE" stroke-width="1.6"/>
+    </svg>
+    <div class="letterhead login-letterhead">
+      <svg class="seal-mark" width="36" height="36" viewBox="0 0 40 40" fill="none">
+        <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="1.3"/>
+        <circle cx="20" cy="20" r="13" stroke="currentColor" stroke-width="1"/>
+        <text x="20" y="25" text-anchor="middle" font-family="'Source Serif 4', serif" font-size="13" font-weight="600" fill="currentColor">स</text>
+      </svg>
+      <div class="letterhead-text">
+        <span class="brand-name">SahayAI</span>
+        <span class="brand-sub">Operator sign-in</span>
+      </div>
+    </div>
+    <label class="login-label">Operator name</label>
+    <input type="text" id="loginName" class="login-input" placeholder="e.g. Ravi Kumar" autocomplete="username" required>
+    <label class="login-label">PIN</label>
+    <input type="password" id="loginPin" class="login-input" placeholder="4-digit PIN" inputmode="numeric" autocomplete="current-password" required>
+    <button type="submit" class="btn-primary login-submit">Sign in</button>
+    <div id="loginError" class="login-error hidden"></div>
+    <p class="login-demo-hint">Demo accounts — Operator: <strong>Ravi Kumar</strong> / 1234 · Supervisor: <strong>Sunita Sharma</strong> / 5678</p>
+  </form>
+</div>
+
+<div class="frame hidden" id="appFrame">
+
+  <aside class="rail">
+    <div class="letterhead">
+      <svg class="seal-mark" width="40" height="40" viewBox="0 0 40 40" fill="none">
+        <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="1.3"/>
+        <circle cx="20" cy="20" r="13" stroke="currentColor" stroke-width="1"/>
+        <g stroke="currentColor" stroke-width="1.1">
+          <line x1="20" y1="3" x2="20" y2="8"/>
+          <line x1="20" y1="32" x2="20" y2="37"/>
+          <line x1="3" y1="20" x2="8" y2="20"/>
+          <line x1="32" y1="20" x2="37" y2="20"/>
+          <line x1="8.3" y1="8.3" x2="11.7" y2="11.7"/>
+          <line x1="28.3" y1="28.3" x2="31.7" y2="31.7"/>
+          <line x1="31.7" y1="8.3" x2="28.3" y2="11.7"/>
+          <line x1="11.7" y1="28.3" x2="8.3" y2="31.7"/>
+        </g>
+        <text x="20" y="25" text-anchor="middle" font-family="'Source Serif 4', serif" font-size="13" font-weight="600" fill="currentColor">स</text>
+      </svg>
+      <div class="letterhead-text">
+        <span class="brand-name">SahayAI</span>
+        <span class="brand-sub">Common Service Centre desk</span>
+      </div>
+    </div>
+
+    <ol class="tokens" aria-label="Workflow steps">
+      <li class="token active" data-step="0">
+        <span class="token-num">•</span>
+        <span class="token-label">Overview</span>
+      </li>
+      <li class="token" data-step="1">
+        <span class="token-num">01</span>
+        <span class="token-label">Find scheme</span>
+      </li>
+      <li class="token" data-step="2">
+        <span class="token-num">02</span>
+        <span class="token-label">Citizen consent</span>
+      </li>
+      <li class="token" data-step="3">
+        <span class="token-num">03</span>
+        <span class="token-label">Scan document</span>
+      </li>
+      <li class="token" data-step="4">
+        <span class="token-num">04</span>
+        <span class="token-label">Review &amp; confirm</span>
+      </li>
+      <li class="token" data-step="5">
+        <span class="token-num">05</span>
+        <span class="token-label">Sync queue</span>
+      </li>
+    </ol>
+
+    <ol class="tokens supervisor-tokens hidden" id="supervisorTokens" aria-label="Supervisor tools">
+      <li class="token-section-label">Supervisor tools</li>
+      <li class="token" data-step="6">
+        <span class="token-num">06</span>
+        <span class="token-label">Team</span>
+      </li>
+      <li class="token" data-step="7">
+        <span class="token-num">07</span>
+        <span class="token-label">Conflicts</span>
+      </li>
+    </ol>
+
+    <div class="rail-status" id="connStatus">
+      <span class="dot" id="connDot"></span>
+      <span id="connLabel">Checking connection…</span>
+    </div>
+
+    <div class="operator-badge" id="operatorBadge">
+      <span class="operator-avatar" id="operatorAvatar">–</span>
+      <div class="operator-info">
+        <span class="operator-name" id="operatorName">—</span>
+        <span class="operator-role" id="operatorRole">—</span>
+      </div>
+      <button class="logout-btn" id="logoutBtn" title="Sign out">⏻</button>
+    </div>
+  </aside>
+
+  <main class="stage">
+
+    <section class="panel paper" id="panel-0">
+      <h2>Today at a glance</h2>
+      <p class="hint">Your activity on this device. Everything here is computed locally from your own queue.</p>
+
+      <div class="overview-stats" id="overviewStats"></div>
+
+      <div class="overview-charts">
+        <div class="overview-chart-card">
+          <h3>Sync status</h3>
+          <div class="donut-wrap">
+            <svg viewBox="0 0 120 120" class="donut-svg" id="donutSvg"></svg>
+            <div class="donut-center" id="donutCenter"></div>
+          </div>
+          <div class="donut-legend" id="donutLegend"></div>
+        </div>
+
+        <div class="overview-chart-card">
+          <h3>Submissions by scheme</h3>
+          <div class="overview-bars" id="overviewBars"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel paper hidden" id="panel-1">
+      <h2>What does the citizen need?</h2>
+      <p class="hint">Speak or type what they're asking for — SahayAI matches it to the right government scheme. This runs entirely on this PC.</p>
+
+      <div class="voice-row">
+        <button id="voiceBtn" class="btn-voice" title="Voice input">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/></svg>
+        </button>
+        <input type="text" id="queryInput" placeholder="e.g. 'my husband died, I need pension' / 'विधवा पेंशन के लिए आवेदन'">
+        <button id="matchBtn" class="btn-primary">Find scheme</button>
+      </div>
+
+      <div id="schemeResult" class="scheme-result hidden"></div>
+
+      <div class="scheme-grid" id="schemeGrid"></div>
+    </section>
+
+    <section class="panel paper hidden" id="panel-2">
+      <h2>Citizen consent</h2>
+      <p class="hint">Selected scheme: <strong id="consentSchemeLabel"></strong></p>
+
+      <div class="consent-box">
+        <p id="consentText" class="consent-text"></p>
+        <label class="consent-checkbox-row">
+          <input type="checkbox" id="consentCheckbox">
+          <span>I have read this to the citizen and they consent to their document being processed on this device.</span>
+        </label>
+      </div>
+
+      <button id="consentBtn" class="btn-primary" disabled>Record consent &amp; continue</button>
+      <div id="consentStatus" class="process-status hidden"></div>
+    </section>
+
+    <section class="panel paper hidden" id="panel-3">
+      <h2>Scan the citizen's document</h2>
+      <p class="hint">Selected scheme: <strong id="activeSchemeLabel"></strong></p>
+
+      <label class="dropzone" id="dropzone">
+        <input type="file" id="fileInput" accept="image/*" hidden>
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+        <span>Click to upload a photo of the document, or drop it here</span>
+        <span class="dropzone-sub">Runs fully offline — nothing leaves this PC</span>
+      </label>
+
+      <div id="previewWrap" class="preview-wrap hidden">
+        <img id="preview" alt="Document preview">
+      </div>
+
+      <button id="processBtn" class="btn-primary" disabled>Process document</button>
+      <div id="processStatus" class="process-status hidden"></div>
+    </section>
+
+    <section class="panel paper hidden" id="panel-4">
+      <h2>Review before submitting</h2>
+
+      <div id="fallbackBanner" class="fallback-banner hidden"></div>
+
+      <div class="review-grid">
+        <div class="review-col">
+          <h3>Extracted fields</h3>
+          <table class="field-table" id="fieldTable"></table>
+
+          <div id="manualEntryWrap" class="manual-entry-wrap hidden">
+            <h3>Manual entry required</h3>
+            <p class="hint" style="margin-bottom:10px;">Automated extraction didn't produce reliable fields — enter them directly.</p>
+            <div class="manual-entry-row"><label>Full name</label><input type="text" id="manualName"></div>
+            <div class="manual-entry-row"><label>Aadhaar No.</label><input type="text" id="manualAadhaar"></div>
+            <div class="manual-entry-row"><label>DOB</label><input type="text" id="manualDob" placeholder="DD/MM/YYYY"></div>
+          </div>
+
+          <h3>Form completeness</h3>
+          <div class="completeness-bar-wrap">
+            <div class="completeness-bar" id="completenessBar"></div>
+          </div>
+          <span id="completenessLabel" class="mono-note"></span>
+          <ul id="missingList" class="missing-list"></ul>
+        </div>
+
+        <div class="review-col stamp-col">
+          <h3>Fraud &amp; quality check</h3>
+          <div id="stampArea" class="stamp-area"></div>
+          <ul id="fraudFlagsList" class="flags-list"></ul>
+          <div class="metrics-note" id="fraudMetrics"></div>
+        </div>
+      </div>
+
+      <button id="confirmBtn" class="btn-primary">Confirm &amp; queue for sync</button>
+    </section>
+
+    <section class="panel paper hidden" id="panel-5">
+      <h2>Sync queue</h2>
+      <p class="hint">Submissions are stored locally and sync automatically when this PC has internet access. Nothing is lost if you're offline all day.</p>
+
+      <button id="syncBtn" class="btn-primary">Run sync now</button>
+      <div id="syncResult" class="mono-note"></div>
+
+      <table class="submissions-table" id="submissionsTable">
+        <thead>
+          <tr><th>Scheme</th><th>Status</th><th>Sync</th><th>Attempts</th><th>Confidence</th><th>Created</th><th></th></tr>
+        </thead>
+        <tbody id="submissionsBody"></tbody>
+      </table>
+    </section>
+
+    <section class="panel paper hidden" id="panel-6">
+      <h2>Team</h2>
+      <p class="hint">Every operator account on this PC. Supervisors can provision new accounts and set roles.</p>
+
+      <div class="supervisor-section">
+        <h3>Operators</h3>
+        <div class="op-list" id="opList"></div>
+      </div>
+
+      <div class="supervisor-section">
+        <h3>Add operator</h3>
+        <form class="add-op-form" id="addOpForm">
+          <div>
+            <label>Name</label>
+            <input type="text" id="newOpName" placeholder="e.g. Priya Nair" required>
+          </div>
+          <div>
+            <label>PIN</label>
+            <input type="password" id="newOpPin" placeholder="4-digit PIN" inputmode="numeric" required>
+          </div>
+          <div>
+            <label>Role</label>
+            <select id="newOpRole">
+              <option value="operator">Operator</option>
+              <option value="supervisor">Supervisor</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-primary">Add</button>
+        </form>
+        <div id="addOpStatus" class="process-status hidden"></div>
+      </div>
+    </section>
+
+    <section class="panel paper hidden" id="panel-7">
+      <h2>Sync conflicts</h2>
+      <p class="hint">A conflict means the same citizen (same Aadhaar number) already has a synced submission for this scheme under a different entry — usually two operators processing the same person independently. Resolve by discarding this duplicate or forcing it through if the two really are different applications.</p>
+
+      <div id="conflictList"></div>
+    </section>
+
+  </main>
+</div>
+
+<div class="modal-overlay hidden" id="auditModalOverlay">
+  <div class="audit-modal">
+    <button class="modal-close" id="auditModalClose">&times;</button>
+    <h3>Audit trail</h3>
+    <span class="mono-note" id="auditSubmissionId"></span>
+    <div id="auditEvents"></div>
+    <div class="audit-chain-status" id="auditChainStatus"></div>
+  </div>
+</div>
+
+<script src="/static/app.js"></script>
+</body>
+</html>

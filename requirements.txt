@@ -1,0 +1,12 @@
+fastapi==0.115.0
+uvicorn==0.30.6
+python-multipart==0.0.9
+opencv-python-headless==4.10.0.84
+pytesseract==0.3.13
+pillow==10.4.0
+numpy==1.26.4
+onnxruntime==1.24.4
+
+# Only needed to retrain models/train_calibration_model.py, not to run the app:
+# scikit-learn
+# skl2onnx

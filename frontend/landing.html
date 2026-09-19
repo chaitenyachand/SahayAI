@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SahayAI — Financial-grade infrastructure for India's Common Service Centres</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8F%9B%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/static/landing.css">
+</head>
+<body>
+
+<!-- Decorative gradient ribbon, Stripe-style -->
+<div class="grad-wave" aria-hidden="true">
+  <svg class="ribbon-svg" viewBox="0 0 1200 800" preserveAspectRatio="xMaxYMin slice">
+    <defs>
+      <linearGradient id="ribbonGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#A6C1FF"/>
+        <stop offset="45%" stop-color="#8C7CFF"/>
+        <stop offset="100%" stop-color="#FF80B5"/>
+      </linearGradient>
+      <linearGradient id="ribbonGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#FFD483"/>
+        <stop offset="55%" stop-color="#FFA680"/>
+        <stop offset="100%" stop-color="#FF80B5"/>
+      </linearGradient>
+    </defs>
+    <path class="ribbon-path-a" d="M 1260,-60 C 1000,140 880,300 760,460" fill="none" stroke="url(#ribbonGrad1)" stroke-width="240" stroke-linecap="round"/>
+    <path class="ribbon-path-b" d="M 1320,120 C 1080,260 960,420 900,600" fill="none" stroke="url(#ribbonGrad2)" stroke-width="170" stroke-linecap="round"/>
+  </svg>
+</div>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <span class="logo-mark"></span>
+      SahayAI
+    </a>
+    <nav class="nav-links">
+      <a href="#product">Product</a>
+      <a href="#how">How it works</a>
+      <a href="#stats">Impact</a>
+      <a href="#roadmap">Roadmap</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="/console" class="btn-ghost">Sign in</a>
+      <a href="/console" class="btn-primary">Launch console</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1 class="hero-title reveal">
+        Financial-grade infrastructure<br> for India's <span class="grad-text">Common Service Centres.</span>
+      </h1>
+      <p class="hero-sub reveal">
+        SahayAI helps CSC operators find the right government scheme, scan and verify documents,
+        and catch fraud — entirely on-device, with zero internet required.
+      </p>
+      <div class="hero-cta reveal">
+        <a href="/console" class="btn-primary btn-lg">Launch the console</a>
+        <a href="#how" class="btn-ghost btn-lg">See how it works ↓</a>
+      </div>
+    </div>
+
+    
+      
+  </section>
+
+  <!-- LOGO / TRUST STRIP -->
+  <section class="trust-strip reveal">
+    <span class="trust-item">Widow Pension</span>
+    <span class="trust-item">PM Kisan Samman Nidhi</span>
+    <span class="trust-item">Ayushman Bharat</span>
+    <span class="trust-item">SC/ST Scholarship</span>
+    <span class="trust-item">+ configurable schemes</span>
+  </section>
+
+  <!-- PRODUCT MOCKUPS -->
+  <section class="section" id="product">
+    <h2 class="section-title reveal">Everything an operator needs, on one desk.</h2>
+    <p class="section-sub reveal">Four capabilities, one offline-first pipeline — built to run on the Hexagon NPU.</p>
+
+    <div class="mockup-row reveal">
+      <div class="mockup-card mockup-card-large">
+        <h3>Scan and verify any document, on any PC</h3>
+        <p>Photograph an ID — fields extract and cross-check for tamper signs in seconds, fully offline.</p>
+        <div class="mockup-stage mockup-stage-split">
+          <div class="phone-mockup">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="scan-frame">
+                <div class="doc-mini">
+                  <div class="doc-mini-line w70"></div>
+                  <div class="doc-mini-line w40 hl" style="--d:0.4s"></div>
+                  <div class="doc-mini-line w55 hl" style="--d:0.9s"></div>
+                  <div class="doc-mini-line w30"></div>
+                  <div class="doc-mini-line w60 hl" style="--d:1.4s"></div>
+                </div>
+                <div class="scan-corner tl"></div><div class="scan-corner tr"></div>
+                <div class="scan-corner bl"></div><div class="scan-corner br"></div>
+                <div class="scan-line"></div>
+              </div>
+              <p class="phone-caption">Scanning document…</p>
+            </div>
+          </div>
+          <div class="browser-mockup">
+            <div class="browser-bar"><span></span><span></span><span></span><div class="browser-url">sahayai.local/review</div></div>
+            <div class="browser-body">
+              <div class="field-row"><span>Full name</span><strong>Anjali Verma</strong></div>
+              <div class="field-row"><span>Aadhaar No.</span><strong class="mono">5567 8823 1190</strong></div>
+              <div class="field-row"><span>DOB</span><strong>18/09/1992</strong></div>
+              <div class="confidence-row">
+                <span>OCR confidence</span>
+                <svg class="pulse-graph" viewBox="0 0 100 24" preserveAspectRatio="none">
+                  <polyline points="0,18 10,15 20,17 30,10 40,13 50,6 60,9 70,4 80,7 90,3 100,5" fill="none" stroke="#2F6B4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <strong class="mono confidence-val">96%</strong>
+              </div>
+              <div class="verify-badge">✓ Verified · Low risk</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mockup-card mockup-card-medium">
+        <h3>Match any government scheme</h3>
+        <p>Confidence-scored matching against the local scheme catalogue.</p>
+        <div class="mockup-stage">
+          <div class="scheme-meter-card">
+            <div class="scheme-meter-head">
+              <span class="scheme-dot"></span>
+              <div>
+                <strong>Widow Pension Scheme</strong>
+                <span class="mono meter-sub">matched · 92%</span>
+              </div>
+            </div>
+            <div class="meter-track"><div class="meter-fill"></div></div>
+            <div class="mini-chart">
+              <div class="bar" style="--h:40%"></div>
+              <div class="bar" style="--h:65%"></div>
+              <div class="bar" style="--h:35%"></div>
+              <div class="bar" style="--h:80%"></div>
+              <div class="bar" style="--h:55%"></div>
+              <div class="bar" style="--h:90%"></div>
+              <div class="bar" style="--h:70%"></div>
+            </div>
+            <span class="mini-chart-label">Submissions processed · last 30 days</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mockup-row three reveal">
+      <div class="mockup-card">
+        <h3>Talk to citizens in their language</h3>
+        <p>Voice or text, Hindi or English — no form navigation required.</p>
+        <div class="mockup-stage chat-stage">
+          <div class="particle-field"></div>
+          <div class="chat-bubble chat-user">मुझे विधवा पेंशन चाहिए</div>
+          <div class="chat-bubble chat-bot" id="chatBotBubble">
+            <span class="typing-dots"><span></span><span></span><span></span></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="mockup-card">
+        <h3>Tamper-proof, on device</h3>
+        <p>Fraud heuristics run locally — nothing is uploaded to check a document.</p>
+        <div class="mockup-stage id-stage">
+          <div class="id-card">
+            <div class="id-card-shine"></div>
+            <div class="id-card-scanline"></div>
+            <div class="id-chip"></div>
+            <div class="id-lines"><span></span><span></span></div>
+            <span class="id-stamp"><span class="id-stamp-ring"></span>✓</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="mockup-card">
+        <h3>Sync when you're ready</h3>
+        <p>Everything queues locally and syncs the moment connectivity returns.</p>
+        <div class="mockup-stage orbit-stage">
+          <svg viewBox="0 0 200 140" class="orbit-svg">
+            <path id="orbitPath" d="M20,110 C60,20 140,20 180,60" fill="none" stroke="#E6ECF1" stroke-width="2"/>
+            <circle cx="20" cy="110" r="6" fill="#0A2540"/>
+            <circle cx="180" cy="60" r="6" fill="#635BFF"/>
+            <circle r="4" fill="#FF80B5">
+              <animateMotion dur="3s" repeatCount="indefinite" rotate="auto">
+                <mpath href="#orbitPath"/>
+              </animateMotion>
+            </circle>
+          </svg>
+          <span class="orbit-label orbit-label-left">This PC</span>
+          <span class="orbit-label orbit-label-right">Govt API</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="section stats-v2" id="stats">
+    <div class="stats-v2-inner">
+      <div class="stats-v2-text reveal">
+        <h2 class="section-title left">The backbone for last-mile digital access.</h2>
+        <div class="stats-v2-grid">
+          <div class="stat">
+            <span class="stat-num" data-target="500000" data-suffix="+">0</span>
+            <span class="stat-label">Common Service Centres across India</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num" data-target="100" data-suffix="%">0</span>
+            <span class="stat-label">of core AI runs fully on-device</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num" data-target="4" data-suffix=" schemes">0</span>
+            <span class="stat-label">supported at launch, more via config</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num" data-target="0" data-suffix="ms">0</span>
+            <span class="stat-label">cloud round-trips in the scan pipeline</span>
+          </div>
+        </div>
+      </div>
+      <div class="stats-v2-chart reveal">
+        <svg viewBox="0 0 320 220" class="line-chart-svg">
+          <defs>
+            <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#635BFF"/>
+              <stop offset="1" stop-color="#FF80B5"/>
+            </linearGradient>
+            <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#635BFF" stop-opacity="0.18"/>
+              <stop offset="1" stop-color="#635BFF" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <polygon points="0,180 40,150 80,160 120,110 160,120 200,70 240,90 280,40 320,55 320,220 0,220" fill="url(#areaGrad)"/>
+          <polyline points="0,180 40,150 80,160 120,110 160,120 200,70 240,90 280,40 320,55" fill="none" stroke="url(#lineGrad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="chart-line" id="chartLine"/>
+          <circle cx="320" cy="55" r="5" fill="#FF80B5" class="chart-dot"/>
+        </svg>
+        <span class="chart-caption">Documents processed on-device, illustrative growth curve</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS (accordion) -->
+  <section class="section" id="how">
+    <h2 class="section-title reveal">From "what do I need?" to synced.</h2>
+    <p class="section-sub reveal">Every step works with zero connectivity — click through the flow.</p>
+
+    <div class="accordion reveal" id="stepAccordion">
+      <div class="accordion-list">
+        <button class="accordion-item active" data-step="1">
+          <span class="accordion-index">01</span>
+          <span class="accordion-item-text">
+            <span class="accordion-title">Find the scheme</span>
+            <span class="accordion-detail">The citizen speaks or types their need. SahayAI matches it to the right government scheme, in their language.</span>
+          </span>
+        </button>
+        <button class="accordion-item" data-step="2">
+          <span class="accordion-index">02</span>
+          <span class="accordion-item-text">
+            <span class="accordion-title">Scan the document</span>
+            <span class="accordion-detail">A photograph is enough — on-device OCR extracts structured fields in seconds.</span>
+          </span>
+        </button>
+        <button class="accordion-item" data-step="3">
+          <span class="accordion-index">03</span>
+          <span class="accordion-item-text">
+            <span class="accordion-title">Review &amp; confirm</span>
+            <span class="accordion-detail">Fraud checks and completeness scoring surface before anything is submitted — low-confidence cases route to manual review.</span>
+          </span>
+        </button>
+        <button class="accordion-item" data-step="4">
+          <span class="accordion-index">04</span>
+          <span class="accordion-item-text">
+            <span class="accordion-title">Sync when ready</span>
+            <span class="accordion-detail">Submissions queue locally and sync the moment connectivity returns. Nothing is lost if the PC is offline all day.</span>
+          </span>
+        </button>
+      </div>
+
+      <div class="accordion-preview">
+        <div class="accordion-preview-panel" data-panel="1">
+          <div class="mini-mic">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#635BFF" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/></svg>
+          </div>
+          <p class="preview-line">"विधवा पेंशन के लिए आवेदन"</p>
+          <span class="preview-tag">→ matched: Widow Pension Scheme</span>
+        </div>
+        <div class="accordion-preview-panel" data-panel="2">
+          <div class="preview-scan-frame"><div class="scan-line"></div></div>
+          <span class="preview-tag">4 fields extracted · 96% confidence</span>
+        </div>
+        <div class="accordion-preview-panel" data-panel="3">
+          <div class="preview-stamp">VERIFIED</div>
+          <span class="preview-tag">Low risk · ready to submit</span>
+        </div>
+        <div class="accordion-preview-panel" data-panel="4">
+          <div class="preview-sync">
+            <span class="sync-node">●</span>
+            <span class="sync-line"></span>
+            <span class="sync-node accent">●</span>
+          </div>
+          <span class="preview-tag">Queued locally · synced 09:41 AM</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section reveal">
+    <h2>Ready to see it in action?</h2>
+    <p>Walk through the full operator flow — scheme match, document scan, fraud review, and sync.</p>
+    <a href="/console" class="btn-primary btn-lg">Launch the console</a>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="logo-mark"></span> SahayAI
+    </div>
+    <p class="footer-note">Offline-first AI infrastructure for India's Common Service Centres — on-device document intelligence, fraud detection, and scheme matching.</p>
+    <p class="footer-note" style="margin-top:6px;">Production path documented for Qualcomm AI Hub / Hexagon NPU deployment.</p>
+  </div>
+</footer>
+
+<script src="/static/landing.js"></script>
+</body>
+</html>
