@@ -2,8 +2,7 @@
 
 **Designed, Optimized, and Natively Accelerated for Snapdragon® X Elite & HP Copilot+ PCs**
 
-![Landing Page](
-  /Users/chaitenyachand/Desktop/SahayAI/frontend/assets/landingpage.png)
+![Landing Page](frontend/assets/landingpage.png)
 ---
 
 ## Executive Summary
